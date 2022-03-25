@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Qual seu caminho Dev</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+
+<body>
+    <form>
+        <section>
+        <h2>Qual o seu caminho dev?</h2>
+        <div>
+            <input type="radio" id="backend" value="Back-End" name="dev_way" onchange="getRadioValue(value)">
+            <label for="backend">Back-End</label> 
+            <input type="radio" id="frontend" value="Front-End" name="dev_way" onchange="getRadioValue(value)">
+            <label for="frontend">Front-End</label>
+        </div>
+        <div>
+            <label for="languages">Desejo aprender:</label>
+            <select id="languages" class="languages" onchange="changeRecordLang()">
+            <option selected="true" hidden="true" value=" ">Selecione uma Linguagem</option>
+            </select><br>
+            
+            <label for="languages">Carreira:</label>
+            <select id="message" class="message" onchange="especialMessage()">
+            <option selected="true" hidden="true" value=" ">Selecione uma Opção</option>
+            <option value="especializacao">Especialização</option>
+            <option value="fullstack">fullStack</option>
+            </select><br>
+            
+            <label>Tecnologias com interesse de conhecer:</label><br>
+            <input type="text" placeholder="Insira as tecnologias" class="tecInput" id="tecInput"> 
+            <button type="button" onclick="addTec()">Ok</button>
+        </div>
+    </section>
+    <div id="infoUser" class="infoUser">
+        <h2>Ficha:</h2>
+        <p>Caminho: </p>
+        <p>Linguagem: </p>
+        <p></p>
+        <h4>Tecnologias para aprender:</h4>
+        <p></p>
+
+    </div>
+    </form>
+</body>    
+<script src="./js.js"></script>
+</html>
